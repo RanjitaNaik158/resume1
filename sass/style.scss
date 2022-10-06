@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
+
+$mainBgColor: #f0f0f0;
+$mainTextColor: rgb(31, 31, 31);
+$mainSubTextColor: #7d7d7d;
+$mainHeadingColor: #0e387a;
+$white: #ffff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  // margin: 2rem auto;
+  background-color: $mainBgColor;
+}
+
+.main-container {
+  // min-width: 550px;
+  position: relative;
+  width: auto;
+  background-color: $white;
+  min-height: 650px;
+  border-radius: 10px;
+  color: $mainTextColor;
+
+  @import "./topConatiner";
+  @import "./bottomContainer";
+  @import "./buttonContainer";
+
+  .watermark {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+    opacity: 0.4;
+    pointer-events: none;
+
+    .para {
+      font-size: 14px;
+    }
+
+    .imgconts {
+      width: 4rem;
+      margin-top: 0.5px;
+    }
+  }
+}
+@import "./mobResponsive";
